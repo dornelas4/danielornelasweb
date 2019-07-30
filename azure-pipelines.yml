@@ -24,6 +24,6 @@ steps:
   displayName: 'npm install and build'
 
 - script: |
-    ngh --dir=dist/danielornelasweb/
+    gh --dir=dist/danielornelasweb/
     
-  displayName: : 'Deploy to webpage'
+  displayName: 'ngh deploy to website'
