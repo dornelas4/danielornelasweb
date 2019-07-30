@@ -23,7 +23,8 @@ steps:
 
   displayName: 'npm install and build'
 - script: |
-    npx ngh --dir=dist/danielornelasweb/
+    pwd
+    npx ngh --loglevel verbose --dir=dist/danielornelasweb/
 
   displayName: 'deploy to web'
 
