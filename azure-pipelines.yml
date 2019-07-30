@@ -24,7 +24,7 @@ steps:
   displayName: 'npm install and build'
 - script: |
     pwd
-    npx ngh --loglevel verbose --dir=dist/danielornelasweb/
+    ls -al
 
   displayName: 'deploy to web'
 
