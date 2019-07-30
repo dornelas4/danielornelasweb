@@ -23,8 +23,10 @@ steps:
 
   displayName: 'npm install and build'
 - script: |
-    pwd
-    ls -al
+  
+    
+    ls -al ./dist
+    ngh --dir=dist/danielornelasweb/
 
   displayName: 'deploy to web'
 
