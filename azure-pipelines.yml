@@ -20,5 +20,5 @@ steps:
     npm install
     npm install -g angular-cli-ghpages
     ng build --prod
-    ngh --dir=dist/danielornelasweb/
+    
   displayName: 'npm install and build'
