@@ -27,7 +27,8 @@ steps:
   displayName: 'npm install and build'
 - script: |
   
-
+    git config --global user.name "Daniel Ornelas"
+    git config --global user.email "dornelas4@miners.utep.edu"
     git config --global --list
     npx ngh --no-silent --dir=dist/danielornelasweb/
 
