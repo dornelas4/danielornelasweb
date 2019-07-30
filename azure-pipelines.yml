@@ -26,7 +26,10 @@ steps:
   
     
    
-    
+    git config --global user.name $NAME
+    git config --global user.email $EMAIL
+
+    git conig --global --list
     npx ngh --no-silent --dir=dist/danielornelasweb/
 
   displayName: 'deploy to web'
