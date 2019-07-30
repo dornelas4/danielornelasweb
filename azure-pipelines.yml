@@ -22,3 +22,8 @@ steps:
     ng build --prod
     
   displayName: 'npm install and build'
+
+- script: |
+    ngh --dir=dist/danielornelasweb/
+    
+  displayName: : 'Deploy to webpage'
