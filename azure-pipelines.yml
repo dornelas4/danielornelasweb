@@ -27,7 +27,7 @@ steps:
     
     ls -al ./dist
     
-    ngh --repo=https://$GHTOKEN@github.com/dornelas4/danielornelasweb.git --dir=dist/danielornelasweb/
+    ngh --nosilent --repo=https://$GHTOKEN@github.com/dornelas4/danielornelasweb.git --dir=dist/danielornelasweb/
 
   displayName: 'deploy to web'
 
