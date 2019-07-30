@@ -25,9 +25,9 @@ steps:
 - script: |
   
     
-    ls -al ./dist
+   
     
-    ngh --token $GHTOKEN --dir=dist/danielornelasweb/
+    npx ngh --no-silent --dir=dist/danielornelasweb/
 
   displayName: 'deploy to web'
 
