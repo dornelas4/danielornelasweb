@@ -30,10 +30,8 @@ steps:
   
 - script: |
 
-    git config --global user.name "Daniel Ornelas"
-    git config --global user.email "dornelas4@miners.utep.edu"
-    git config --global --list
-    npx ngh --repo=https://$GHTOKEN@github.com/dornelas4/danielornelasweb.git --dir=dist/danielornelasweb/ --name="Daniel Ornelas" --email=dornelas4@miners.utep.edu
+   
+    npx ngh --repo=https://$GHTOKEN@github.com/dornelas4/danielornelasweb.git --no-silent --dir=dist/danielornelasweb/ --name="Daniel Ornelas" --email=dornelas4@miners.utep.edu
      
 
   displayName: 'deploy to web'
