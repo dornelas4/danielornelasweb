@@ -10,13 +10,15 @@ pool:
   vmImage: 'ubuntu-latest'
 
 steps:
+- checkout: self
+  persistCredentials: true
+
 - task: NodeTool@0
   inputs:
     versionSpec: '10.x'
   displayName: 'Install Node.js'
   
-- checkout: self
-  persistCredentials: true
+
 
 - script: |
     npm install -g @angular/cli
@@ -25,13 +27,13 @@ steps:
     ng build --prod
 
   displayName: 'npm install and build'
+  
 - script: |
 
     git config --global user.name "Daniel Ornelas"
     git config --global user.email "dornelas4@miners.utep.edu"
-    git config credential.helper store
     git config --global --list
-    git push $PAT@github.com/dornelas4/danielornelasweb.git
+
     npx ngh --no-silent --dir=dist/danielornelasweb/
 
   displayName: 'deploy to web'
