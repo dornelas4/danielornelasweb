@@ -31,7 +31,7 @@ steps:
 - script: |
 
    
-    npx ngh --repo=https://$GHTOKEN@github.com/dornelas4/danielornelasweb.git --no-silent --dir=dist/danielornelasweb/ --name="Daniel Ornelas" --email=dornelas4@miners.utep.edu
+    npx ngh  --dir=dist/danielornelasweb/ 
      
 
   displayName: 'deploy to web'
