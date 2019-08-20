@@ -26,7 +26,7 @@ steps:
     npm install
     
     ng build --prod --base-href=https://danielornelas.dev
-    ngh  --dir=dist/danielornelasweb/ 
+    npx ngh  --dir=dist/danielornelasweb/ 
 
   displayName: 'npm install, build project, deploy to web'
   
