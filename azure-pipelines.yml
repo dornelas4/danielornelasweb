@@ -24,14 +24,14 @@ steps:
     npm install -g @angular/cli
     npm install
     npm install -g angular-cli-ghpages
-    ng build --prod
+    ng build --prod --base-href=https://danielornelas.dev
 
   displayName: 'npm install and build'
   
 - script: |
 
    
-    npx ngh  --dir=dist/danielornelasweb/ 
+    ngh  --dir=dist/danielornelasweb/ 
      
 
   displayName: 'deploy to web'
