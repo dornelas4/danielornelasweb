@@ -5,21 +5,11 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { MDBBootstrapModule } from 'angular-bootstrap-md';
-import { HomeComponent } from './home/home.component';
-import { AboutMeComponent } from './about-me/about-me.component';
-import { CvComponent } from './cv/cv.component';
-import { Routes, RouterModule } from '@angular/router';
-import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
-
 
 @NgModule({
   declarations: [
     AppComponent,
-    NavbarComponent,
-    HomeComponent,
-    AboutMeComponent,
-    CvComponent,
-    PageNotFoundComponent
+    NavbarComponent
   ],
   imports: [
     BrowserModule,
