@@ -10,6 +10,7 @@ import { AboutMeComponent } from './about-me/about-me.component';
 import { CvComponent } from './cv/cv.component';
 import { Routes, RouterModule } from '@angular/router';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
+import { IntroComponent } from './home/intro/intro.component';
 
 
 @NgModule({
@@ -19,7 +20,8 @@ import { PageNotFoundComponent } from './page-not-found/page-not-found.component
     HomeComponent,
     AboutMeComponent,
     CvComponent,
-    PageNotFoundComponent
+    PageNotFoundComponent,
+    IntroComponent
   ],
   imports: [
     BrowserModule,
