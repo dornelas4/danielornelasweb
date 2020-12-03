@@ -11,6 +11,7 @@ import { CvComponent } from './cv/cv.component';
 import { Routes, RouterModule } from '@angular/router';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 import { IntroComponent } from './home/intro/intro.component';
+import { WhiteElephantPrivacyComponent } from './white-elephant-privacy/white-elephant-privacy.component';
 
 
 @NgModule({
@@ -21,7 +22,8 @@ import { IntroComponent } from './home/intro/intro.component';
     AboutMeComponent,
     CvComponent,
     PageNotFoundComponent,
-    IntroComponent
+    IntroComponent,
+    WhiteElephantPrivacyComponent
   ],
   imports: [
     BrowserModule,
