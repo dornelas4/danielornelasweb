@@ -1,6 +1,5 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import { CountdownModule } from 'ngx-countdown';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { NavbarComponent } from './navbar/navbar.component';
@@ -13,7 +12,8 @@ import { IntroComponent } from './home/intro/intro.component';
 import { WhiteElephantPrivacyComponent } from './white-elephant-privacy/white-elephant-privacy.component';
 import { WeddingComponent } from './wedding/wedding.component';
 import { RsvpPageComponent } from './wedding/rsvp-page/rsvp-page.component';
-
+import {FormsModule} from '@angular/forms'
+import {HttpClientModule} from '@angular/common/http'
 
 
 @NgModule({
@@ -31,8 +31,9 @@ import { RsvpPageComponent } from './wedding/rsvp-page/rsvp-page.component';
   ],
   imports: [
     BrowserModule,
+    FormsModule,
+    HttpClientModule,
     AppRoutingModule,
-    CountdownModule,
     MDBBootstrapModule.forRoot()
   ],
   providers: [],

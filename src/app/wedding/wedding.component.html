@@ -11,11 +11,17 @@
                     <div class="text-white text-center">
                         <div>
                            
-                            <!-- Content -->      
+                            <!-- Content -->   
+                            <div id="timer">
+                                <span id="days"></span>{{days}} Days
+                                <span id="hours"></span>{{hours}} Hours
+                                <span id="minutes"></span>{{minutes}} Minutes
+                                <span id="seconds"></span>{{seconds}} Seconds
+                              </div>   
                                             
                             <h2 class="card-title h2 my-4 py-2">Save the Date</h2>                
-                            <a mdbBtn gradient="blue" mdbWavesEffect>
-                                <mdb-icon fas icon="" class="left" style="opacity: 1;"></mdb-icon> RSVP
+                            <a routerLink="/wedding/rsvp" mdbBtn gradient="blue" mdbWavesEffect>
+                                <mdb-icon  fas icon="hand-paper" class="left" style="opacity: 1;"></mdb-icon> RSVP HERE
                             </a>
                         </div>
                     </div>
