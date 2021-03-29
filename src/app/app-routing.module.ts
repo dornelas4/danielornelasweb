@@ -5,14 +5,18 @@ import { HomeComponent } from './home/home.component';
 import { AboutMeComponent } from './about-me/about-me.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 import { WhiteElephantPrivacyComponent } from './white-elephant-privacy/white-elephant-privacy.component';
+import { WeddingComponent } from './wedding/wedding.component';
+import { RsvpPageComponent } from './wedding/rsvp-page/rsvp-page.component';
 
 
 const routes : Routes = [
-  {path : '', component : HomeComponent},
+  { path : '', component : HomeComponent},
   { path : 'home', component : HomeComponent},
   { path : 'cv', component : CvComponent},
   { path : 'about-me', component : AboutMeComponent},
   { path : 'white-elephant-privacy',component : WhiteElephantPrivacyComponent},
+  { path : 'wedding', component: WeddingComponent},
+  { path : 'wedding/rsvp', component: RsvpPageComponent},
   { path : 'not-found', component : PageNotFoundComponent},
   { path : '**' , redirectTo : '/not-found'}
 ];

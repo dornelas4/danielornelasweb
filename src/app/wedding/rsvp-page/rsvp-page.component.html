@@ -1,0 +1,47 @@
+<!-- Default form contact -->
+<form class="text-center border border-light p-5" (ngSubmit)="onSubmitRSVPForm()" #f="ngForm">
+
+    <p class="h4 mb-4">Confirma tu asistencia</p>
+    <p class ="mb-3">
+        Llena esta forma cuantas veces sea necesario. Por favor utiliza el mismo correo electronico si deseas actualizar tu informacion.
+        Deja tu nombre, e-mail, numero de personas que asistiran, y un mensaje opcional. Si tu decision cambia o tienes que actualizar tu informacion, por favor
+        hacerlo con al menos 1 mes de anticipacion. Gracias.
+    </p>
+  
+    <!-- Name -->
+    <div class="form-group" ngModelGroup="userData">
+        <input type="text" id="defaultContactFormName" class="form-control mb-4" placeholder="Nombre/Familia" ngModel name="name" required>
+    </div>
+
+  
+    <!-- Email -->
+    <div class="form-group" ngModelGroup="userData">
+        <input type="email" id="defaultContactFormEmail" class="form-control mb-4" placeholder="E-mail" ngModel name="email" required email>
+    
+    </div>
+    <!-- Subject -->
+    <label>Asistencia</label>
+    <select class="browser-default custom-select mb-4" ngModel name="attendance" required>
+      <option value="" disabled>Choose option</option>
+      <option value="yes" selected>Si</option>
+      <option value="no">No</option>
+    </select>
+
+    <label>Numero de personas</label>
+    <select class="browser-default custom-select mb-4" ngModel name="numPersons" required>
+        <option value="" disabled>Choose option</option>
+        <option *ngFor="let option of options;" value="{{option}}" >{{option}}</option>
+      
+  
+ 
+    </select>
+
+    <div class="form-group" >
+      <textarea class="form-control rounded-0" id="exampleFormControlTextarea2" rows="3" placeholder="Mensaje" ngModel name="message"></textarea>
+    </div>
+  
+    <!-- Send button -->
+    <button mdbBtn color="info" block="true" type="submit" [disabled]="!f.valid">Send</button>
+  
+  </form>
+  <!-- Default form contact -->
