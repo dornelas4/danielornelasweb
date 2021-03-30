@@ -1,9 +1,11 @@
 import { Component, OnInit } from '@angular/core';
+import { RSVPDataService } from './rsvp-shared/rsvp-data.service';
+import { RSVPService } from './rsvp-shared/rsvp.service';
 
 @Component({
   selector: 'app-wedding',
   templateUrl: './wedding.component.html',
-  styleUrls: ['./wedding.component.scss']
+  styleUrls: ['./wedding.component.scss'],
 })
 export class WeddingComponent implements OnInit {
 
@@ -11,7 +13,7 @@ export class WeddingComponent implements OnInit {
   days = 0;
   hours = 0;
   minutes = 0;
-  seconds = 10;
+  seconds = 0;
   timer: any;
 
   compareDate = new Date("10/02/2021");
@@ -54,8 +56,8 @@ export class WeddingComponent implements OnInit {
 
   ngOnInit(): void {
 
-     
-      this.timeBetweenDates(this.compareDate);
+      setInterval(() => this.timeBetweenDates(this.compareDate),1000);
+      
     
 
 
