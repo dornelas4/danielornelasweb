@@ -1,6 +1,6 @@
 import { Component, OnInit, ViewChild } from '@angular/core';
 import { NgForm } from '@angular/forms';
-import { HttpClient } from '@angular/common/http';
+import { RSVPService } from '../rsvp-shared/rsvp.service';
 @Component({
   selector: 'app-rsvp-page',
   templateUrl: './rsvp-page.component.html',
@@ -8,22 +8,47 @@ import { HttpClient } from '@angular/common/http';
 })
 export class RsvpPageComponent implements OnInit {
 
-  options = [1,2,3,4,5,6,7,8]
+  Arr : number[] = [];
+  isAssisting = false;
+  numPersonOptions = [1,2,3,4,5,6,7,8]
+  numPersonSelected = 0;
   @ViewChild('f') signupForm : NgForm
 
-  constructor(private http : HttpClient) { }
+  constructor(private rsvpService : RSVPService) { }
 
   ngOnInit(): void {
     
   }
 
-  onSubmitRSVPForm(){
-    
-
+  async onSubmitRSVPForm(){
     var data = this.signupForm.value;
     var emailKey = this.signupForm.value.userData.email.split("@")[0];
-    this.http.post(`https://danielornelasweb-default-rtdb.firebaseio.com/rsvp/${emailKey}.json`,data).subscribe(response => console.log(response));
+ 
+    this.rsvpService.retrieveRSVP(emailKey).subscribe(response =>{
+      if (response == null || response == undefined){
+        this.rsvpService.createAndStoreRSVP(emailKey,data)
+      }
+      else{
+        for(var rsvpId in response){
+          this.rsvpService.updateRSVP(emailKey,rsvpId,data);
+        }
+      }
+    } );
     this.signupForm.reset();
+    this.isAssisting = false;
+    this.numPersonSelected = 0;
+    alert("Gracias por tu confirmacion");
+  }
+
+  onSelectAssisting(){
+    this.isAssisting= this.signupForm.value['attendance'] == "true" ? true : false;
+  }
+  onSelectNumPersons(){
+    this.numPersonSelected = this.signupForm.value['numPersons'];
+    this.Arr = new Array(this.numPersonSelected);
+    for(var i = 0; i < this.numPersonSelected; i++){
+      this.Arr[i] = i + 1;
+    }
   }
 
   

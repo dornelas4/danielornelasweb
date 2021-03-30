@@ -21,20 +21,23 @@
     </div>
     <!-- Subject -->
     <label>Asistencia</label>
-    <select class="browser-default custom-select mb-4" ngModel name="attendance" required>
-      <option value="" disabled>Choose option</option>
-      <option value="yes" selected>Si</option>
-      <option value="no">No</option>
+    <select class="browser-default custom-select mb-4" (change)="onSelectAssisting()" ngModel name="attendance" required>
+      <option value="" disabled selected> Choose option</option>
+      <option value="true" >Si</option>
+      <option value="false">No</option>
     </select>
+    
+    <div *ngIf="isAssisting">
+      <label>Numero de personas</label>
+      <select class="browser-default custom-select mb-4" (change)="onSelectNumPersons()" ngModel name="numPersons" required>
+          <option value="" disabled>Choose option</option>
+          <option *ngFor="let option of numPersonOptions;" value="{{option}}" >{{option}}</option>
+      </select>
 
-    <label>Numero de personas</label>
-    <select class="browser-default custom-select mb-4" ngModel name="numPersons" required>
-        <option value="" disabled>Choose option</option>
-        <option *ngFor="let option of options;" value="{{option}}" >{{option}}</option>
-      
-  
- 
-    </select>
+      <div class="form-group" ngModelGroup="assistingPeople" *ngIf="numPersonSelected != 0">
+        <input class="form-control mb-3" *ngFor="let num of Arr;" type = "text"  placeholder="Invitado {{num}}" ngModel name="person{{num}}" required> 
+      </div>
+    </div>
 
     <div class="form-group" >
       <textarea class="form-control rounded-0" id="exampleFormControlTextarea2" rows="3" placeholder="Mensaje" ngModel name="message"></textarea>

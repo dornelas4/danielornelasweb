@@ -13,7 +13,9 @@ import { WhiteElephantPrivacyComponent } from './white-elephant-privacy/white-el
 import { WeddingComponent } from './wedding/wedding.component';
 import { RsvpPageComponent } from './wedding/rsvp-page/rsvp-page.component';
 import {FormsModule} from '@angular/forms'
-import {HttpClientModule} from '@angular/common/http'
+import {HttpClientModule} from '@angular/common/http';
+import { RsvpViewerComponent } from './wedding/rsvp-viewer/rsvp-viewer.component';
+
 
 
 @NgModule({
@@ -27,7 +29,8 @@ import {HttpClientModule} from '@angular/common/http'
     IntroComponent,
     WhiteElephantPrivacyComponent,
     WeddingComponent,
-    RsvpPageComponent
+    RsvpPageComponent,
+    RsvpViewerComponent
   ],
   imports: [
     BrowserModule,

@@ -7,6 +7,8 @@ import { PageNotFoundComponent } from './page-not-found/page-not-found.component
 import { WhiteElephantPrivacyComponent } from './white-elephant-privacy/white-elephant-privacy.component';
 import { WeddingComponent } from './wedding/wedding.component';
 import { RsvpPageComponent } from './wedding/rsvp-page/rsvp-page.component';
+import { RsvpViewerComponent } from './wedding/rsvp-viewer/rsvp-viewer.component';
+import { RSVPResolverService } from './wedding/rsvp-shared/rsvp-resolver.service';
 
 
 const routes : Routes = [
@@ -17,6 +19,7 @@ const routes : Routes = [
   { path : 'white-elephant-privacy',component : WhiteElephantPrivacyComponent},
   { path : 'wedding', component: WeddingComponent},
   { path : 'wedding/rsvp', component: RsvpPageComponent},
+  { path : 'wedding/rsvp-view', component: RsvpViewerComponent, resolve: [RSVPResolverService]},
   { path : 'not-found', component : PageNotFoundComponent},
   { path : '**' , redirectTo : '/not-found'}
 ];
