@@ -1,6 +1,5 @@
-<div class="container">
+
   <div class="row">
-    
     <div class="card text-center" *ngFor="let rsvp of RSVPs" [ngStyle]="{'color': (rsvp.attendance) ? 'green' : 'red'}">  
         <div class="card-header">{{rsvp.name}}</div>
         <div class="card-body">
@@ -14,9 +13,8 @@
         
         </div>
         <div class="card-footer text-muted">Replace with date</div>
-      </div>
-   
+      </div> 
 </div>
-</div>
+
 
 
