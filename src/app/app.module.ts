@@ -10,11 +10,10 @@ import { CvComponent } from './cv/cv.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 import { IntroComponent } from './home/intro/intro.component';
 import { WhiteElephantPrivacyComponent } from './white-elephant-privacy/white-elephant-privacy.component';
-import { WeddingComponent } from './wedding/wedding.component';
-import { RsvpPageComponent } from './wedding/rsvp-page/rsvp-page.component';
+
 import {FormsModule} from '@angular/forms'
 import {HttpClientModule} from '@angular/common/http';
-import { RsvpViewerComponent } from './wedding/rsvp-viewer/rsvp-viewer.component';
+
 
 
 
@@ -28,9 +27,7 @@ import { RsvpViewerComponent } from './wedding/rsvp-viewer/rsvp-viewer.component
     PageNotFoundComponent,
     IntroComponent,
     WhiteElephantPrivacyComponent,
-    WeddingComponent,
-    RsvpPageComponent,
-    RsvpViewerComponent
+
   ],
   imports: [
     BrowserModule,
